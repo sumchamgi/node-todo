@@ -1,0 +1,130 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{
+    background-image: linear-gradient(0deg, rgba(247,247,247,1) 23%, rgba(252,221,221,1) 92%);
+    height: 100vh;
+    overflow: hidden;
+}
+
+#wrap{
+    h1{
+        height: 50px;
+        text-align: center;
+        margin-top: 80px;
+        a{
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+    .todoBox{
+        width: 400px;
+        height: 500px;
+        background: white;
+        margin: 100px auto;
+        padding: 20px;
+        box-shadow: 0 20px 20px 0 rgba(255,169,169,.6);
+        border-radius: 2%;
+        overflow-y: auto;
+        .todoInputBox{
+            width: 100%;
+            padding: 20px 0;
+            form{
+                display: flex;
+                justify-content: space-between;
+                .todoInput{
+                    width: 280px;
+                    height: 50px;
+                }
+                .todoBtn{
+                    height: 50px;
+                    width: 70px;
+                    background: rgb(197, 153, 247);
+                    border: none;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    border-radius: 5px;
+                    color: white;
+                    font-weight: bold;
+                    &:hover{
+                        color: black;
+                        box-shadow:
+                        -7px -7px 20px 0px #fff9,
+                        -4px -4px 5px 0px #fff9,
+                        7px 7px 20px 0px #0002,
+                        4px 4px 5px 0px #0001;
+                    }
+                }
+            }
+        }
+        .todo_date{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            .todo_today{
+                font-weight: bold;
+            }
+        }
+        .todoList{
+            ul{
+                .todo_content{
+                    list-style: none;
+                    display: flex;
+                    padding: 10px 0;
+                    input{
+                        margin-right: 10px;
+                        cursor: pointer;
+                    }
+                    p{
+                        width: 300px;
+    
+                        height: 30px;
+                        font-size: 22px;
+                        line-height: 30px;
+                    }
+                    button{
+                        margin: 0 10px;
+                        cursor: pointer;
+                        background: none;
+                        border: none;
+                    }
+                    .edit{
+                        display: none;
+                        img{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                    
+                    .delete{
+                        display: none;
+                        img{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+.on{
+    color: #ddd;
+    text-decoration: line-through;
+}
+
+.on2{
+    display: block !important
+}
+#list{
+    /* border-bottom: 2px solid rgb(197, 153, 247); */
+    
+}
+#list::after{
+    content: "";
+    display: block;
+    width: 250px;
+    border-bottom: 2px solid #ddd;
+}

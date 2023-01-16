@@ -1,0 +1,49 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{
+    background-image: linear-gradient(0deg, rgba(247,247,247,1) 23%, rgba(252,221,221,1) 92%);
+    height: 100vh;
+    overflow: hidden;
+}
+#wrap{
+    .todoBox{
+        width: 400px;
+        height: 130px;
+        background: white;
+        margin:  230px auto;
+        
+        padding: 20px;
+        box-shadow: 0 20px 20px 0 rgba(255,169,169,.6);
+        border-radius: 2%;
+        .todoInputBox{
+            width: 100%;
+            padding: 20px 0;
+            form{
+                display: flex;
+                justify-content: space-between;
+                .todoInput{
+                    width: 280px;
+                    height: 50px;
+               }
+               .todoBtn{
+                height: 50px;
+                width: 70px;
+                background: rgb(197, 153, 247);
+                border: none;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                &:hover{
+                    color: black;
+                    box-shadow:
+                    -7px -7px 20px 0px #fff9,
+                    -4px -4px 5px 0px #fff9,
+                    7px 7px 20px 0px #0002,
+                    4px 4px 5px 0px #0001;
+                }
+               }
+            }
+        }
+    }
+}

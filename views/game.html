@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../public/style/game/game.css">
+    <script src="../public/js/game.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <button id="settings-btn" class="settings-btn">
+        <i class="fas fa-cog"></i>
+    </button>
+    <div id="settings" class="settings">
+        <form id="settings-form">
+            <label for="difficulty">difficulty</label>
+            <select id="difficulty">
+                <option value="easy">easy</option>
+                <option value="medium">medium</option>
+                <option value="hard">hard</option>
+            </select>
+        </form>
+    </div>
+    <div class="container">
+        <h1>✨Speed Typer✨</h1>
+        <small>Type the following</small>
+        <h1 id="word"></h1>
+        <input type="text" id="text" autocomplete="off" placeholder="Type the word here..." autofocus>
+        <p class="item-container">Time left: <span id="time">10s</span></p>
+        <p class="score-container">Score: <span id="score">.</span></p>
+        <div id="end-game-container" class="end-game-container"></div>
+    </div>
+</body>
+</html>

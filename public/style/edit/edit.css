@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(0deg, rgb(247, 247, 247) 23%, rgb(252, 221, 221) 92%);
+  height: 100vh;
+  overflow: hidden;
+}
+
+#wrap .todoBox {
+  width: 400px;
+  height: 130px;
+  background: white;
+  margin: 230px auto;
+  padding: 20px;
+  box-shadow: 0 20px 20px 0 rgba(255, 169, 169, 0.6);
+  border-radius: 2%;
+}
+#wrap .todoBox .todoInputBox {
+  width: 100%;
+  padding: 20px 0;
+}
+#wrap .todoBox .todoInputBox form {
+  display: flex;
+  justify-content: space-between;
+}
+#wrap .todoBox .todoInputBox form .todoInput {
+  width: 280px;
+  height: 50px;
+}
+#wrap .todoBox .todoInputBox form .todoBtn {
+  height: 50px;
+  width: 70px;
+  background: rgb(197, 153, 247);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+#wrap .todoBox .todoInputBox form .todoBtn:hover {
+  color: black;
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.6), -4px -4px 5px 0px rgba(255, 255, 255, 0.6), 7px 7px 20px 0px rgba(0, 0, 0, 0.1333333333), 4px 4px 5px 0px rgba(0, 0, 0, 0.0666666667);
+}/*# sourceMappingURL=edit.css.map */

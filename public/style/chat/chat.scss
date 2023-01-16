@@ -1,0 +1,179 @@
+
+$bt:rgb(197, 153, 247);
+$boxShadow:0 20px 20px 0 rgba(255,169,169,.6);
+$font_large:30px;
+$font_medium:18px;
+$font_small:12px;
+$boder:3px solid rgb(40, 150, 253);
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-image: linear-gradient(0deg, rgba(247,247,247,1) 23%, rgba(252,221,221,1) 92%);
+    height: 100vh;
+    overflow: hidden;
+}
+#wrap{
+    width: 100%;
+    height: 100%;
+    h1{
+        height: 50px;
+        text-align: center;
+        margin-top: 80px;
+        a{
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+    .chat_box{
+        width: 900px;
+        height: 600px;
+        
+        margin: 100px auto;
+        padding: 20px 0;
+        
+        border-radius: 2%;
+        display: flex;
+        justify-content: space-between;
+
+        .user_box{
+            flex-basis: 30%;
+            height: 100%;
+            background: #F7F5EB;
+            box-shadow: $boxShadow;
+            border-radius: 10px;
+            .user_tite{
+                font-size: $font_large;
+                padding: 10px;
+                text-align: center;
+                font-weight: bold;
+                padding: 20px;
+                border-bottom: 3px solid #ddd;
+            }
+            .users{
+                
+                list-style: none;
+                text-align: center;
+                .user_notice{
+                    font-size: $font_medium;
+                    padding: 20px;
+                    
+                    border-bottom: 3px solid #ddd;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    color:black;
+                    
+                }
+                
+            }
+        }
+        .chat_box_list{
+            flex-basis: 60%;
+            box-shadow: $boxShadow;
+            background: white;
+            border-radius: 10px;
+            .messages{
+                list-style: none;
+                height: 550px;
+                background: #EAE0DA;
+                overflow-y: auto;
+                
+                li{
+                    
+                    padding: 0.3rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    margin-top: 0.1rem;
+                    
+                    
+                    
+
+                }
+                .user_notice{
+                    justify-content: center;
+                    .exit{
+                        color: red;
+                        font-weight: bold;
+                    }
+                    .entrance{
+                        color: blue;
+                        font-weight: bold;
+                    }
+                }
+                .sent{
+                    flex-direction: row-reverse;
+                    float: right;
+                    width: 100%;
+                    .user{
+                        display: flex;
+                        flex-direction: column;
+                        
+                        .user_name{
+                            color: black;
+                            font-size: $font_small;
+                            text-align: end;
+                        }
+                        .user_message{
+                            width: 200px;
+                            margin-top: 10px;
+                            margin-right: 10px;
+                            padding: 12px;
+                            border-radius: 10px;
+                            background: yellow;
+                            color: black;
+                        }
+                    }
+                }
+                .received{
+                    .user{
+                        display: flex;
+                        flex-direction: column;
+                        
+                        .user_name{
+                            color: black;
+                            font-size: $font_small;
+                            
+                        }
+                        .user_message{
+                            width: 200px;
+                            margin-top: 10px;
+                            margin-right: 10px;
+                            padding: 12px;
+                            border-radius: 10px;
+                            background: white;
+                            color: black;
+                        }
+                    }
+                }
+                
+                
+            }
+        }
+        .form_box{
+            display: flex;
+            #msg{
+                height: 50px;
+                border: none;
+                width: 450px;
+                flex-basis: 85%;
+            }
+            .msg_btn{
+                background: $bt;
+                border: none;
+                flex-basis: 15%;
+                height: 50px;
+                
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+

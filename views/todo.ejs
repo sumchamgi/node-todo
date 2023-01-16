@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="../public/js/todo.js" defer></script> 
+    <link rel="stylesheet" href="../public/style/todo/todo.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="wrap">
+       <h1><a href="/"><img src="../public/img/applicationsfeatured_93757.png" alt=""></a></h1>
+        <div class="todoBox">
+            <div class="todoInputBox" id="todoInputBox">
+                <form action="/todo/write" method="post">
+                    <input type="text" name="content" class="todoInput" maxlength='10' id="todoInput" placeholder="What to do today">
+                    <button type="submit" class="todoBtn">Send</button>
+                </form>
+            </div>
+            <div class="todo_date">
+
+            </div>
+            
+            <div class="todoList"> 
+                <ul>
+                    <% for (let i = 0; i< todotasks.length; i++){%>
+                    <li class="todo_content">
+                        
+                        <input type="checkbox" id="ck">
+                        <p id="list"><%= todotasks[i].content %></p>
+                        <button class="edit" onclick="location.href='/todo/edit/<%= todotasks[i]._id %>'">
+                        <img src="../public/img/Editing-Edit-icon.png" alt=""></button>
+                        <button class="delete" ><img src="../public/img/delete_47751.png" alt="" data-id="<%= todotasks[i]._id%>"></button>
+                        
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+            
+            
+        </div>
+    </div>
+    
+    
+    
+
+</body>
+</html>
